@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="DrillBit.jpg">
+    <title>Release Notes</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 0 auto; background-color: #e2f7fd; border: 1px solid #ddd; }
+        .header { text-align: center; position: relative; }
+        .header img { width: 800px; height: 300px; object-fit: cover; }
+        .header h1 { font-family: "Gowun Batang", serif; font-size: 48px; font-weight: bold; margin: -60px 0px 0 200px; color: #14c6fc; text-shadow: 2px 4px 0px rgba(115, 216, 216, 0.3); }
+        .content { padding: 20px; }
+        .feature { display: flex; align-items: center; margin: 20px 0; position: relative; border-bottom: 2px solid white; box-shadow: 0 4px 8px rgba(3, 124, 244, 0.5); padding-bottom: 20px; }
+        .feature:last-child { border-bottom: none; }
+        .feature:nth-child(even) { flex-direction: row-reverse; }
+        .feature img { width: 40%; border-radius: 8px; transition: transform 0.3s; }
+        .feature-text { width: 60%; padding: 20px; }
+        .feature-text h2 { font-size: 24px; color: #0073e6; margin-bottom: 10px; }
+        .feature-text p { font-size: 16px; line-height: 1.6; color: #555; }
+
+        /* Popup styles */
+        .popup {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            z-index: 100;
+            border: 2px solid #0073e6;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        .popup img {
+            width: 600px;
+            border-radius: 8px;
+        }
+
+        .feature img:hover + .popup {
+            display: block;
+        }
+
+        .footer { text-align: center; padding: 1px 1px; background-color: #05e4fc; color: rgb(115, 1, 115); }
+        .footer a { color: #6655fc; text-decoration: none; font-weight: bold; }
+        
+        @media (max-width: 768px) { 
+            .feature { flex-direction: column; } 
+            .feature img, .feature-text { width: 100%; } 
+            .feature-text { padding: 1px; } 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="DrillBitDim1.jpeg" alt="DrillBit Image">
+            <h1>Release Notes</h1>
+        </div>
+        <div class="content">
+            <div>
+                <h1 style="color: rgb(142, 24, 252);">DrillBit September 2024 Round-Up</h1>
+                <p style="color: darkblue;">Introducing AI Detection, Multi-factor Authentication (MFA) for Security, Bulk Student Creation using CSV and Phrases Exclude... </p>
+                <p style="color: darkblue;">We've added a range of powerful features and enhancements to boost your plagiarism detection capabilities and streamline your user experience.</p>
+            </div>
+            <h3 style="color: navy;">Let’s dive in!</h3>
+            <!-- Feature 1 -->
+            <div class="feature">
+                <img src="AI.png" alt="Feature 1">
+                <div class="popup">
+                    <img src="AI.png" alt="Feature 1 Popup">
+                </div>
+                <div class="feature-text">
+                    <h2>AI Detection</h2>
+                    <p style="text-align: justify;">DrillBit now offers an advanced AI detection feature that identifies AI-generated content, including text produced by tools like ChatGPT. Users can effortlessly access the AI detection results directly on the Analysis page, with the option to download both the AI report and the Plagiarism report for comprehensive insights.</p>
+                </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="feature">
+                <img src="MFA (2).png" alt="Feature 2">
+                <div class="popup">
+                    <img src="MFA (2).png" alt="Feature 2 Popup">
+                </div>
+                <div class="feature-text">
+                    <h2>Multi-factor Authentication (MFA) for Security</h2>
+                    <p style="text-align: justify;">Take your account security to the next level with DrillBit’s new Multi-Factor Authentication (MFA). This feature requires users to verify their identity through an additional method beyond just a password, helping to significantly reduce the risk of unauthorized access.</p>
+                </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="feature">
+                <img src="BulkStudent.png" alt="Feature 3">
+                <div class="popup">
+                    <img src="BulkStudent.png" alt="Feature 3 Popup">
+                </div>
+                <div class="feature-text">
+                    <h2>Bulk Student Creation using CSV</h2>
+                    <p style="text-align: justify;">DrillBit’s student management gets a streamlined upgrade! Admins can now add multiple student accounts effortlessly using the new bulk CSV upload. Instructors can seamlessly enroll students created by the admin directly into classes by selecting the 'Add from list' option, now available under the Students tab in the Admin view. Just download the template, fill in the required fields, and add students with a click on the plus icon.</p>
+                </div>
+            </div>
+            <!-- Feature 4 -->
+            <div class="feature">
+                <img src="PhrasesExclude.png" alt="Feature 4">
+                <div class="popup">
+                    <img src="PhrasesExclude.png" alt="Feature 4 Popup">
+                </div>
+                <div class="feature-text">
+                    <h2>Phrases Exclude</h2>
+                    <p style="text-align: justify;">The new Exclude Phrases feature enhances similarity matching accuracy by ignoring frequently used or technical terms. Users can exclude up to 15 phrases, each up to 200 characters long, during folder setup or editing. This case-sensitive feature ensures that the specified phrases are not considered in the similarity check, enabling more accurate plagiarism detection by focusing on substantial content. Simply toggle the Exclude Phrases option to 'Yes,' and enter your phrases for a more refined analysis!</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h3>Get ready for some amazing new features coming in October!</h3>
+            <h2>Keep an eye out for updates—you won’t want to miss what’s next!</h2>
+            <p>For more details, visit <a href="https://drillbitplagiarism.com">DrillBit</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
